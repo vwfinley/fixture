@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+app="main.py"
+datapath="../data"
+indata="points.csv"
+outdata="points_o.csv"
+precision="4"
+
+cat $datapath/$indata | python $app -p $precision > $datapath/$outdata
+cat $datapath/$outdata
