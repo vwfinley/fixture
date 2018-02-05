@@ -1,0 +1,1 @@
+cat ..\data\points.csv | python main.py > points.out.csv
