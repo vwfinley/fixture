@@ -31,12 +31,12 @@ def main(argv):
     reader = csv.reader(stdin)
     headings, names, points = parse(reader)
 
-    process(points)
+    points_out = process(points)
 
 
 
     writer = csv.writer(stdout)
-    output(writer, headings, names, points, precision)
+    output(writer, headings, names, points_out, precision)
 
     exit(0)
 
