@@ -1,5 +1,5 @@
 from sys import path
-from numpy import pi
+from numpy import pi, radians
 
 path.insert(0, 'C:/svn_vwf/spatial/trunk')
 from spatial import point, translation, rotation, cart2pol
@@ -10,8 +10,8 @@ def process(points):
     p0 = points.pop(0)
     p1 = points[0]
     n = len(points)
-    theta_start = 180.0
-    theta_end = 360.0
+    theta_start = radians(180.0)
+    theta_end = radians(360.0)
     theta_span = theta_end - theta_start
     theta_incr = theta_span / n
     i = 0

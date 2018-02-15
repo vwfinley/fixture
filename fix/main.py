@@ -28,11 +28,6 @@ def main(argv):
 
     points_out = process(points)
 
-
-#    point = points_out[0]
-#    po0 = point[0]
-#    po1 = point[1]
-#   po = point[2]
     writer = csv.writer(stdout)
     output(writer, headings, names[1:], points_out, precision)
 
