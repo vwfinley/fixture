@@ -12,11 +12,6 @@ from output import output
 
 def main(argv):
 
-#    if platform == "win32":
-#        print("win32")
-#        import os, msvcrt
-#        msvcrt.setmode(stdout.fileno(), os.O_BINARY)
-
     if platform == "win32":
         stdout = open(sys.__stdout__.fileno(), 
             mode=sys.__stdout__.mode, 
@@ -31,12 +26,15 @@ def main(argv):
     reader = csv.reader(stdin)
     headings, names, points = parse(reader)
 
-    process(points)
+    points_out = process(points)
 
 
-
+#    point = points_out[0]
+#    po0 = point[0]
+#    po1 = point[1]
+#   po = point[2]
     writer = csv.writer(stdout)
-    output(writer, headings, names, points, precision)
+    output(writer, headings, names[1:], points_out, precision)
 
     exit(0)
 
